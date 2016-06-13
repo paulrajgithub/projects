@@ -1,0 +1,24 @@
+<div class="container-fluid ">
+	{{top-slider session=session}}
+</div>
+<div>
+	<h2 id="title">Welcome to Ember.js - With Authentication!</h2>
+
+	{{#if session.isAuthenticated}}
+	  Hi, {{session.email}}
+	  <br/>
+	  You can't see this text unless you're logged in!
+	  <br/>
+	  Click this button to logout: 
+	  <button {{action 'invalidateSession'}}>Logout</button>
+	  <br/>
+	  If you try to go to the
+	  {{#link-to "home"}}Home{{/link-to}}
+	  page, you should get redirected!
+	{{else}}
+	  {{#link-to "home"}}Home{{/link-to}}
+	{{/if}}
+</div>
+
+
+{{outlet}}

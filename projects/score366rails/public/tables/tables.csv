@@ -1,0 +1,9 @@
+Tablename,text,text,text,text,text,text,timestamp,timestamp,Datetime,boolean,integer,integer,integer (belongsto),integer (belongsto),integer (belongsto),integer (belongsto),integer(manytomany1),integer(manytomany2)
+users,firstname,lastname,email,username,password,email, ,updated_at,,active,sequence,,,,,,,
+teams,name,logo,stadium,,,,,updated_at,,active,sequence,,,,,,,
+tournaments,name,logo,type,,,,,updated_at,,active,sequence,,,,,,,
+gameweek,,,,,,,,updated_at,day,active,sequence,week,,,,,,
+teamgames,,,,,,,,updated_at,,active,sequence,,,,,,,
+games,score, ,,,,,,updated_at,,active,sequence,,hometeamid(teams),awayteamid(teams),,,,
+matches,score,,,,,,,updated_at,,active,sequence,,hometeamid(teams),awayteamid(teams),homeuserid(users),awayuserid(users),,
+teamstournaments,,,,,,,,updated_at,,active,sequence,,,,,,tournaments,teams

@@ -1,0 +1,56 @@
+<div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Score366</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active">
+        	<a href="#">
+        		<img src="/assets/images/bpl.png" alt="Smiley face" class="topsliderimages">
+			</a>
+        </li>
+        <li>
+        	<a href="#">
+        		<img src="/assets/images/laliga.png" alt="Smiley face" class="topsliderimages">
+        	</a>
+        </li>
+        <li>
+        	<a href="#">
+        		<img src="/assets/images/seriea.png" alt="Smiley face" class="topsliderimages">
+        	</a>
+        </li>
+        <li>
+        	<a href="#">
+        		<img src="/assets/images/bundesliga.png" alt="Smiley face" class="topsliderimages">
+        	</a>
+        </li>
+        <li>
+        	<a>
+        		{{#if session.isAuthenticated}}
+				  <a {{ action 'invalidateSession' }}>Logout</a>
+				{{else}}
+					<form {{action "authenticate" on="submit"}}>
+					  <div class="pull-left">
+					    {{input value=identification class="form-control" placeholder="E-mail" type="text" name="email"}}
+					  </div>
+					  <div class="pull-left">
+					    {{input value=password class="form-control" placeholder="Password" type="password" name="password"}}
+					  </div>
+					  <div class="pull-left">
+					    <button type="submit" class="btn btn-success">Go</button>
+					  </div>
+					</form>
+				{{/if}}
+        	</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+</div>
+
+
+{{yield}}
