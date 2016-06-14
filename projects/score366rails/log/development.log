@@ -18169,3 +18169,8 @@ Completed 200 OK in 1228ms (Views: 79.0ms | ActiveRecord: 0.0ms)
 Started GET "/home/test" for 127.0.0.1 at 2016-06-13 20:24:22 -0230
 Processing by HomeController#index as */*
 Completed 200 OK in 1390ms (Views: 57.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/home/test" for 127.0.0.1 at 2016-06-13 23:44:11 -0230
+Processing by HomeController#index as */*
+Completed 200 OK in 9197ms (Views: 84.6ms | ActiveRecord: 0.0ms)
